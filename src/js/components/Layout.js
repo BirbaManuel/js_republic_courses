@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import ContactList from "./ContactList";
 import ContactDetails from "./ContactDetails";
+import Setting from "./Setting";
+import { Link } from "react-router";
 
 export default class Layout extends React.Component {
   constructor() {
@@ -29,6 +31,7 @@ export default class Layout extends React.Component {
         <Header />
         <ContactList selectedContact={this.handleSelectedContact.bind(this)} />
         <ContactDetails selectedContact={this.handleSelectedContact.bind(this)} contact={this.state.selectedContact} />
+        <Link to="Setting">Setting</Link>
         <Footer />
       </div>
     );
